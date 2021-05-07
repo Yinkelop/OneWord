@@ -4,7 +4,7 @@
 
 本脚本制作者:
 耀星
-一言1.0
+一言1.5
 """
 #导入
 import requests,json,random,re,socket
@@ -21,15 +21,15 @@ website="www.baidu.com",443
 def main():
     q=isNetOK(website)
     if q:
-             wjdata,jh=jiexi(wengjian)
+         wjdata,jh=jiexi(wengjian)
          #随机源,由这个得到随机的yid
-             sjy=random.randint(1,len(wjdata))
-         #try:
+         sjy=random.randint(1,len(wjdata))
+         try:
              data,sentence,author,resultType,name=request(wjdata,str(sjy),jh)
              sentence,author=jsonjx(data,sentence,author)
              show(sentence,author)
-         #except Exception as e:
-             #print('出错了3:',e)
+         except Exception as e:
+             pass
 
 
 
@@ -57,7 +57,7 @@ def request(wjdata,sjy,jh):
        sentence=wjdata[sjy]["apiHitokotoKey"]
        author=wjdata[sjy]["apiSourceKey"]
        resultType=wjdata[sjy]["resultType"]
-       data=requests.get(url,headers=headers)
+       data=requests.get(url,headers=headers,timeout=5)
        data.encoding='utf-8'
        return data.text,sentence,author,resultType,name
     else:
@@ -72,7 +72,7 @@ def jsonjx(data,sentence,author):
 #命令行显示
 def show(sentence,author):
     if a==True and author!=None:
-        print(sentence+'\n\t\t\t---'+author)
+        print(sentence+'\n\t\t\t\t---'+author)
     else:
         print(sentence)
 
