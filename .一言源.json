@@ -1,0 +1,17 @@
+[
+	{
+		"apiId":"1",
+		"apiName":"网易热评",
+		"apiAddress":"http:\/\/w4y.imlk.top\/thin_api",
+		"apiHitokotoKey":"content",
+		"apiSourceKey":"origin",
+		"resultType":"json"
+	},
+	{
+		"apiId":"2",
+		"apiName":"古诗词源",
+		"apiAddress":"https:\/\/v1.jinrishici.com\/all.json",
+		"apiHitokotoKey":"content",
+		"apiSourceKey":"origin",
+		"resultType":"json"
+	}]
