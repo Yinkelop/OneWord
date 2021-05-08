@@ -4,7 +4,7 @@
 
 本脚本制作者:
 耀星
-一言1.5
+yiyan2.0
 """
 #导入
 import requests,json,random,re,socket
@@ -14,7 +14,7 @@ fenjson=re.compile(r'{.*}',re.S)
 #定义全局变量
 a=True
 #文件地址
-wengjian=".一言源.json"
+wengjian='.yiyanyuan.json'
 #判断是否联网的网址
 website="www.baidu.com",443
 #函数
@@ -75,6 +75,9 @@ def show(sentence,author):
         print(sentence+'\n\t\t\t\t---'+author)
     else:
         print(sentence)
+
+
+
 
 
 
