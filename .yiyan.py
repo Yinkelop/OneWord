@@ -4,11 +4,10 @@
 
 本脚本制作者:
 耀星
-yiyan2.0
+yiyan2.1
 """
 #导入
-import requests,json,random,re,socket
-from os import getcwd,sep
+import requests,json,random,re,socket,os
 #正则表达式
 fenjson=re.compile(r'{.*}',re.S)
 
@@ -22,7 +21,8 @@ website="www.baidu.com",443
 def main():
     q=isNetOK(website)
     if q:
-         wj=str(getcwd())+str(sep)+wengjian
+         wj=(str(os.path.dirname(os.path.realpath(__file__)))+str(os.sep)+wengjian)
+         
          wjdata,jh=jiexi(wj)
          #随机源,由这个得到随机的yid
          sjy=random.randint(1,len(wjdata))
@@ -36,14 +36,14 @@ def main():
 
 
 #解析本地文件,返回字典
-def jiexi(wengjian):
-    try:
+def jiexi(wengjiian):
+    #try:
         jh=set()
-        wjdata=json.load(open(wengjian))
+        wjdata=json.load(open(wengjiian))
         for item in wjdata:
            jh.add(item.get("apiId"))
         return wjdata,jh
-    except Exception as e:
+    #except Exception as e:
         print('出错了:',e)
 #发送请求，返回响应
 def request(wjdata,sjy,jh):
