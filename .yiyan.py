@@ -8,6 +8,7 @@ yiyan2.0
 """
 #导入
 import requests,json,random,re,socket
+from os import getcwd,sep
 #正则表达式
 fenjson=re.compile(r'{.*}',re.S)
 
@@ -21,7 +22,8 @@ website="www.baidu.com",443
 def main():
     q=isNetOK(website)
     if q:
-         wjdata,jh=jiexi(wengjian)
+         wj=str(getcwd())+str(sep)+wengjian
+         wjdata,jh=jiexi(wj)
          #随机源,由这个得到随机的yid
          sjy=random.randint(1,len(wjdata))
          try:
@@ -38,8 +40,6 @@ def jiexi(wengjian):
     try:
         jh=set()
         wjdata=json.load(open(wengjian))
-        #print(type(wjdata))
-        #print(type(wjdata[0]))
         for item in wjdata:
            jh.add(item.get("apiId"))
         return wjdata,jh
