@@ -10,15 +10,15 @@
 deb系系统：
 ```
 apt install python3 &&
-apt install curl &&
-curl https://gitee.com/Yinkelop/python---one-word.git &&
+apt install git &&
+git clone https://gitee.com/Yinkelop/python---one-word.git &&
 python3 .yiyan.py
 ```
 arch:
 ```
 pacman -S python3 &&
-pacman -S curl &&
-curl https://gitee.com/Yinkelop/python---one-word.git &&
+pacman -S git &&
+git clone https://gitee.com/Yinkelop/python---one-word.git &&
 python3 .yiyan.py
 ```
 #### 使用说明
