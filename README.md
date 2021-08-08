@@ -1,4 +1,5 @@
 # python-一言
+# 该代码仅作技术交流,切勿用作商业用途
 
 #### 介绍
 灵感来自安卓端的一言
@@ -22,6 +23,7 @@ git clone https://gitee.com/Yinkelop/python---one-word.git &&
 python3 .yiyan.py
 ```
 #### 使用说明
+
 
 输入python3 .yiyan.py -h 获取帮助
 
