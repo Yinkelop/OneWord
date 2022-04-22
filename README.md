@@ -7,21 +7,7 @@
 
 #### 安装教程
 
-复制到终端执行
-deb系系统：
-```
-apt install python3 &&
-apt install git &&
-git clone https://gitee.com/Yinkelop/python---one-word.git &&
-python3 .yiyan.py
-```
-arch:
-```
-pacman -S python3 &&
-pacman -S git &&
-git clone https://gitee.com/Yinkelop/python---one-word.git &&
-python3 .yiyan.py
-```
+复
 #### 使用说明
 
 
