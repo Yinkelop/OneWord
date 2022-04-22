@@ -6,7 +6,7 @@
 灵感来自安卓端的一言
 一言3.0重置版
 本脚本制作者:
-耀星
+Yinkelop
 '''
 VERSION='3.0重置版'
 
@@ -30,7 +30,7 @@ FILEPATH会自动生成的一言源文件绝对路径，默认为源文件与当
 但就是想把一言源文件放在其他目录，请把FILEPATH改成一言源文件的绝对路径
 也可以使用-i参数指定
 '''
-FILENAME='.yiyanyuan.json'
+FILENAME='.OneWord.json'
 FILEPATH=(str(os.path.dirname(os.path.realpath(__file__)))+str(os.sep)+FILENAME)
 
 CYCLE=1
@@ -39,7 +39,7 @@ SOURCE_ID=None
 SIZE=os.get_terminal_size().columns
 
 #超时错误
-X=0#为true忽略，false提示
+X=0#为$true忽略，false提示
 
 #定义函数
 #主函数
@@ -85,19 +85,19 @@ def termux_parameter():
                     error+='-d,'
             elif op=='-h':
                 helper()
-                exit()
+                os._exit(0)
             elif op=='-v':
                 print('当前版本:',VERSION)
-                exit()
+                os._exit(0)
             elif op=='-x':
                 global X
                 X=1
         if error!='':
             print('%s参数使用错误,已退出程序!使用-h查看帮助'%error)
-            exit()
+            os._exit(0)
     except :
         print('错误，有参数无值,已退出程序!使用-h查看帮助')
-        exit()
+        os._exit(0)
         
     return termux_param
 #帮助
