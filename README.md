@@ -7,7 +7,7 @@
 #### 安装教程
 
 ```
-git clone https://gitee.com/Yinkelop/python---one-word.git
+git clone https://gitee.com/Yinkelop/OneWord.git
 ```
 
 #### 使用说明
