@@ -1,4 +1,4 @@
-# python-oneword
+# OneWord
 # 该代码仅作技术交流,切勿用作商业用途
 
 #### 介绍
