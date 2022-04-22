@@ -14,4 +14,13 @@
 		"apiHitokotoKey":"content",
 		"apiSourceKey":"origin",
 		"resultType":"json"
-	}]
+	},
+    {
+        "apiId":"3",
+        "apiName":"一言",
+        "apiAddress":"http:\/\/v1.hitokoto.cn",
+        "apiHitokotoKey":"hitokoto",
+        "apiSourceKey":"from",
+        "resultType":"json"
+    }
+]
